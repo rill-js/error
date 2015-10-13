@@ -1,0 +1,14 @@
+{
+  "name": "@rill/error",
+  "version": "0.1.0",
+  "description": "HttpError instance used in the Rill framework.",
+  "author": "Dylan Piercey <pierceydylan@gmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rill-js/error"
+  },
+  "peerDependencies": {
+    "@rill/http": "*"
+  }
+}
