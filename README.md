@@ -31,7 +31,6 @@ The http error function used in Rill. Automatically generates error messages and
 
 # Installation
 
-#### Npm
 ```console
 npm install @rill/error
 ```
