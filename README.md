@@ -39,11 +39,16 @@ npm install @rill/error
 ```javascript
 var HttpError = require('@rill/error')
 
-new HttpError(404)//-> [HttpError Not Found]
+new HttpError(404) //-> [HttpError Not Found]
+HttpError.fail(404) //-> throws [HttpError Not Found]
+HttpError.assert(false, 404) //-> throws [HttpError Not Found]
+HttpError.assert(true, 404) //-> Does nothing
 ```
 
 # API
 + **HttpError(statusCode, [statusMessage], [metaData])** : Creates a new HttpError.
++ **HttpError.fail(statusCode, [statusMessage], [metaData])** : Creates a new HttpError and automatically throws it.
++ **HttpError.assert(value, statusCode, [statusMessage], [metaData])** : Creates a new HttpError and automatically throws it if value is falsey.
 
 ### Contributions
 
