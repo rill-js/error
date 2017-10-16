@@ -53,9 +53,11 @@ npm install @rill/error
 import HttpError, { assert, fail } from "@rill/error";
 
 new HttpError(404); //-> [HttpError Not Found]
-HttpError.fail(404); //-> throws [HttpError Not Found]
-HttpError.assert(false, 404); //-> throws [HttpError Not Found]
-HttpError.assert(true, 404); //-> Does nothing
+
+fail(404); //-> throws [HttpError Not Found]
+
+assert(false, 404); //-> throws [HttpError Not Found]
+assert(true, 404); //-> Does nothing
 ```
 
 # API
