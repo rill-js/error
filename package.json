@@ -5,22 +5,22 @@
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "bugs": "https://github.com/rill-js/error/issues",
   "dependencies": {
-    "just-extend": "^1.1.22",
+    "just-extend": "^1.1.26",
     "tslib": "^1.8.0"
   },
   "devDependencies": {
     "@rill/http": "^6.0.0",
     "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.40",
+    "@types/node": "^8.0.46",
     "coveralls": "^3.0.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.2.3",
+    "lint-staged": "^4.3.0",
     "mocha": "^4.0.1",
     "nyc": "^11.2.1",
     "prettier": "^1.7.4",
     "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "tslint-config-prettier": "^1.5.0",
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.5.3"
   },
   "files": [

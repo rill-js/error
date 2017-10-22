@@ -19,7 +19,10 @@ export default class HttpError implements Error {
       throw new TypeError("Rill#HttpError.fail: Status code must be a number.");
     }
 
-    extend(this, metaData);
+    if (typeof metaData === "object") {
+      extend(this, metaData);
+    }
+
     this.code = statusCode;
     this.name = "HttpError";
     this.message = statusMessage || STATUS_CODES[statusCode];
