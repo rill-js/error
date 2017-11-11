@@ -1,7 +1,6 @@
 import { STATUS_CODES } from "@rill/http";
-import * as extend from "just-extend";
 
-export default class HttpError implements Error {
+class HttpError implements Error {
   public code: number;
   public name: string;
   public message: string;
@@ -20,7 +19,9 @@ export default class HttpError implements Error {
     }
 
     if (typeof metaData === "object") {
-      extend(this, metaData);
+      for (const key in metaData) {
+        this[key] = metaData[key];
+      }
     }
 
     this.code = statusCode;
@@ -36,6 +37,8 @@ export default class HttpError implements Error {
 }
 
 HttpError.prototype = Object.create(Error.prototype);
+module.exports = exports = HttpError;
+export default HttpError;
 
 /**
  * Throw an http error.
@@ -63,6 +66,3 @@ export function assert(value: any, code: number, message?: string, meta?: any) {
     fail(code, message, meta);
   }
 }
-
-// Expose module with commonjs interop.
-module.exports = extend(exports.default, exports);
